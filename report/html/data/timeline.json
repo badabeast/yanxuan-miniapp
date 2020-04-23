@@ -1,0 +1,26 @@
+{
+  "uid" : "ab17fc5a4eb3bca4b216b548c7f9fcbc",
+  "name" : "timeline",
+  "children" : [ {
+    "name" : "DESKTOP-CH78COM",
+    "children" : [ {
+      "name" : "14688-MainThread",
+      "children" : [ {
+        "name" : "test_run_all_case[获取图表渲染列表]",
+        "uid" : "6225087b856a1182",
+        "parentUid" : "a3abc638574df503af135698bed554d7",
+        "status" : "passed",
+        "time" : {
+          "start" : 1577150407619,
+          "stop" : 1577150410971,
+          "duration" : 3352
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'获取图表渲染列表'" ]
+      } ],
+      "uid" : "a3abc638574df503af135698bed554d7"
+    } ],
+    "uid" : "8eed4e90e8a3bf1e4f71a2d11c47bac1"
+  } ]
+}

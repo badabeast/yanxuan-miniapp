@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>目前支持替换的参数列表</title>
+</head>
+<link href="https://cdn.bootcss.com/semantic-ui/2.0.0/semantic.css" rel="stylesheet">
+<style>
+    table, tr, td, th {
+        border: 1px solid #d6d6d6;
+    }
+
+    table {
+        border-collapse: collapse;
+        width: 100%;
+        color: #555;
+        font-size: 14px;
+        table-layout: fixed;
+    }
+
+    th,
+    td {
+        text-align: center;
+        width: 90px;
+        padding: 6px 6px;
+        word-wrap: break-word;
+    }
+
+    tr:nth-child(2n+1) {
+        background: aliceblue;
+    }
+
+    tr {
+        transition: background-color 1s;
+    }
+
+    tr:hover {
+        background: lightpink;
+    }
+</style>
+<body>
+    <div style="text-align: center">
+        <div class="ui input focus" style="padding: 5px;">
+            <input type="text" placeholder="请输入搜索内容" id="filterName" name="filterName">
+        </div>
+        <button class="ui button search" style="background: lightpink">搜索</button>
+    </div>
+    <table>
+        <th>用例名称</th>
+        <th>保存值名称</th>
+        <th>保存值路径</th>
+        <th>替换值用法(双击复制)</th>
+        {% for param in params %} 
+        <tr>
+            <td>{{ param[0] }}</td>
+            <td>{{ param[1] }}</td>
+            <td>{{ param[2] }}</td>
+            <td>{{ param[3] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script type="text/javascript">
+    const btns = document.getElementsByTagName("td");
+    for (var i in btns) {
+        btns[i].onclick = testClick;
+    }
+
+    function testClick() {
+        const input = document.createElement('input');
+        document.body.appendChild(input);
+        input.setAttribute('value', this.innerHTML);
+        input.select();
+        if (document.execCommand('copy')) {
+            document.execCommand('copy');
+            console.log('复制成功');
+        }
+        document.body.removeChild(input);
+    }
+    $(function() {
+     $('.search').on('click', function() {
+         $('table tbody tr').hide()
+             .filter(":contains('" + ($('#filterName').val()) + "')")
+             .show();
+     })
+    })
+
+    $('#filterName').keydown(function (e) {
+        if (e.which == 13) {
+        $('.search').trigger("click");
+        }
+    });
+</script>
+</html>

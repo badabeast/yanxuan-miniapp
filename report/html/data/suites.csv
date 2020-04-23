@@ -1,0 +1,2 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Tue Dec 24 09:20:07 CST 2019","Tue Dec 24 09:20:10 CST 2019","3352","","test_run_pro_api","","","","test_run_all_case[获取图表渲染列表]",""

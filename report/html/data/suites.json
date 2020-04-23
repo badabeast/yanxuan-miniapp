@@ -1,0 +1,22 @@
+{
+  "uid" : "98d3104e051c652961429bf95fa0b5d6",
+  "name" : "suites",
+  "children" : [ {
+    "name" : "test_run_pro_api",
+    "children" : [ {
+      "name" : "test_run_all_case[获取图表渲染列表]",
+      "uid" : "6225087b856a1182",
+      "parentUid" : "51518a4c13d3a55a7300cf2c186771e4",
+      "status" : "passed",
+      "time" : {
+        "start" : 1577150407619,
+        "stop" : 1577150410971,
+        "duration" : 3352
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "'获取图表渲染列表'" ]
+    } ],
+    "uid" : "51518a4c13d3a55a7300cf2c186771e4"
+  } ]
+}

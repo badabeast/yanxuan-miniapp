@@ -1,0 +1,18 @@
+{
+  "uid" : "b1a8273437954620fa374b796ffaacdd",
+  "name" : "behaviors",
+  "children" : [ {
+    "name" : "test_run_all_case[获取图表渲染列表]",
+    "uid" : "6225087b856a1182",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1577150407619,
+      "stop" : 1577150410971,
+      "duration" : 3352
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ "'获取图表渲染列表'" ]
+  } ]
+}
